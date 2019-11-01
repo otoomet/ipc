@@ -92,6 +92,7 @@ TextFileSource <- R6Class(
       if(private$isDestroyed())
         stop("Cannot push to a destroyed TextFileSource")
       s <- objectToString(obj)
+      message(s)
       private$q$push(msg, s)
     },
 
